@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>SSG - Static Site Generation Demo</h1>
+  <p class="description">
+    This page demonstrates SSG concepts where content is pre-rendered at build time.This would be
+    generated as static HTML files.
+  </p>
+
+  <div class="info-box">
+    <h3>SSG Characteristics:</h3>
+    <ul>
+      <li>Pre-rendered at build time</li>
+      <li>Served as static files</li>
+      <li>Fastest loading performance</li>
+      <li>Perfect for CDN caching</li>
+      <li>Ideal for content that doesn't change often</li>
+    </ul>
+  </div>
+
+  <div class="static-content">
+    <h2>Featured Categories</h2>
+    <div class="categories-grid">
+      @for (category of staticCategories(); track category.id) {
+      <div class="category-card">
+        <img [src]="category.image" [alt]="category.name" />
+        <h3>{{ category.name }}</h3>
+        <p>{{ category.description }}</p>
+      </div>
+      }
+    </div>
+  </div>
+</div>

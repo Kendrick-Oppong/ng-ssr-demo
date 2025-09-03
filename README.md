@@ -1,59 +1,88 @@
-# NgSsrDemo
+# Angular SSR Demo - CSR, SSR, and SSG Showcase
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+This project demonstrates the differences between Client-Side Rendering (CSR), Server-Side Rendering (SSR), and Static Site Generation (SSG) using Angular with the Platzi Fake API.
 
-## Development server
+## Features Demonstrated
 
-To start a local development server, run:
+### 🖥️ Client-Side Rendering (CSR)
+- Data fetched after component initialization
+- Loading states visible to users
+- Interactive client-side behavior
+- Route: `/csr`
+
+### 🌐 Server-Side Rendering (SSR)
+- Content rendered on the server
+- Immediate content visibility
+- Better SEO and social sharing
+- Hydration for interactivity
+- Route: `/ssr`
+
+### 📄 Static Site Generation (SSG)
+- Pre-rendered content concepts
+- Fastest loading performance
+- CDN-friendly static content
+- Route: `/ssg`
+
+### 🔄 Hydration & Event Replay
+- Demonstrates Angular's hydration process
+- Event replay functionality
+- Incremental hydration features
+- Interactive elements post-hydration
+
+## API Integration
+
+Uses the [Platzi Fake API](https://fakeapi.platzi.com/) to demonstrate:
+- Product listings
+- Product details
+- Category information
+- Real-world data fetching scenarios
+
+## Development Commands
 
 ```bash
+# Start development server (CSR mode)
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+# Build and serve with SSR
 ng build
+npm run serve:ssr:ng-ssr-demo
+
+# Development with SSR
+ng serve --ssr
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Key Technologies
 
-## Running unit tests
+- Angular 20.2.0
+- Angular SSR
+- Angular Hydration with Event Replay
+- Incremental Hydration
+- HttpClient with Fetch API
+- Standalone Components
+- Angular Signals
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Project Structure
 
-```bash
-ng test
+```
+src/app/
+├── components/
+│   ├── home/              # Landing page with explanations
+│   ├── csr-demo/          # Client-side rendering demo
+│   ├── ssr-demo/          # Server-side rendering demo
+│   ├── ssg-demo/          # Static site generation demo
+│   └── product-detail/    # Product details with hydration demo
+├── services/
+│   └── product.service.ts # API service for Platzi Fake API
+└── app.routes.ts          # Application routing
 ```
 
-## Running end-to-end tests
+## Presentation Topics Covered
 
-For end-to-end (e2e) testing, run:
+1. **CSR vs SSR vs SSG** - When to use each approach
+2. **Hydration** - How Angular makes server-rendered content interactive
+3. **Event Replay** - Capturing and replaying user interactions during hydration
+4. **Incremental Hydration** - Progressive enhancement of interactivity
+5. **Performance Implications** - Loading times, SEO, and user experience
+6. **Real-world API Integration** - Practical examples with external APIs
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Perfect for presentations about modern Angular rendering strategies and performance optimization techniques.
