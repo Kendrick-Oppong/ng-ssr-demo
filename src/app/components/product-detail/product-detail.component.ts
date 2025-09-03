@@ -12,7 +12,6 @@ import { ProductService, Product } from '../../services/product.service';
 export class ProductDetailComponent implements OnInit {
   product = signal<Product | null>(null);
   loading = signal(true);
-  clickCount = signal(0);
 
   private readonly route = inject(ActivatedRoute);
   private readonly productService = inject(ProductService);
@@ -31,7 +30,5 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
-  incrementCounter() {
-    this.clickCount.update((count) => count + 1);
-  }
+
 }

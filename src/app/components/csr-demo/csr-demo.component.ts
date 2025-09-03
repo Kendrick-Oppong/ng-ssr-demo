@@ -18,7 +18,7 @@ export class CsrDemoComponent implements OnInit {
   ngOnInit() {
     this.productService.getProducts().subscribe({
       next: (products) => {
-        this.products.set(products);
+        this.products.set(products.slice(0, 5));
         this.loading.set(false);
       },
       error: () => this.loading.set(false),

@@ -16,7 +16,7 @@ export class SsrDemoComponent implements OnInit {
 
   ngOnInit() {
     this.productService.getProducts().subscribe({
-      next: (products) => this.products.set(products),
+      next: (products) => this.products.set(products.slice(0, 5)),
     });
     console.log('SSR initialized');
   }

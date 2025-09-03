@@ -21,6 +21,10 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
   },
   {
+    path: 'event-replay',
+    renderMode: RenderMode.Server,
+  },
+  {
     path: 'product/:id',
     renderMode: RenderMode.Prerender,
 

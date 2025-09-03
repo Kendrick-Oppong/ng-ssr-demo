@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './ssg-demo.component.css',
 })
 export class SsgDemoComponent implements OnInit {
-  staticCategories = signal([
+ public readonly staticCategories = signal([
     {
       id: 1,
       name: 'Electronics',

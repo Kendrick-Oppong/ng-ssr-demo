@@ -13,13 +13,7 @@
         <p class="category">Category: {{ product()!.category.name }}</p>
         <p class="description">{{ product()!.description }}</p>
         
-        <div class="hydration-demo">
-          <h3>Hydration Demo</h3>
-          <button (click)="incrementCounter()" class="btn">
-            Clicked {{ clickCount() }} times
-          </button>
-          <p><em>This button demonstrates hydration - interactivity added after SSR.</em></p>
-        </div>
+
       </div>
     </div>
   } @else {

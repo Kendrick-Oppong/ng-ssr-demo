@@ -2,10 +2,13 @@
   <div class="nav-container">
     <a routerLink="/" class="nav-brand">Angular SSR Demo</a>
     <div class="nav-links">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
       <a routerLink="/csr" routerLinkActive="active">CSR</a>
       <a routerLink="/ssr" routerLinkActive="active">SSR</a>
       <a routerLink="/ssg" routerLinkActive="active">SSG</a>
+      <a routerLink="/event-replay" routerLinkActive="active">Event Replay</a>
     </div>
   </div>
 </nav>
